@@ -1,0 +1,6 @@
+<h3>Title: <%= @post.title %></h3>
+<p>Content:</p>
+<%= @post.content %></br></br>
+
+Blogger's page: <%= link_to(@post.blogger.name, blogger_path(@post.blogger)) %></br></br>
+See more on destination: <%= link_to(@post.destination.name, destination_path(@post.destination)) %></br>

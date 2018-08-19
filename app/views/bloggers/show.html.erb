@@ -1,0 +1,11 @@
+<h3><%=@blogger.name %></h3>
+<h3>Read my blogs here:</h3>
+<ol>
+  <% @blogger.posts.each do |post|%>
+    <li><%=link_to(post.title, post_path(post))%></li>
+  <% end %>
+</ol>
+
+<h3> <%= link_to(@blogger.featured_post.title, post_path(@blogger.featured_post))%> </h3>
+
+<h3>I have <%= @blogger.total_likes %> likes!</h3></br>
